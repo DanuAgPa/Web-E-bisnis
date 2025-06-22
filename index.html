@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmora - Toko Helm Sepeda & Motor Terbaik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .category-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600679472829-304634ead8ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showPage(page) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => {
+                p.classList.add('hidden');
+            });
+            document.getElementById(page).classList.remove('hidden');
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600">HELMORA</a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-800 hover:text-blue-600" onclick="showPage('home')">Home</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600" onclick="showPage('products')">Products</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600" onclick="showPage('about')">About Us</a>
+                <a href="#" class="text-gray-800 hover:text-blue-600" onclick="showPage('contact')">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-800 hover:text-blue-600"><i class="fas fa-search"></i></a>
+                <a href="#" class="text-gray-800 hover:text-blue-600"><i class="fas fa-user"></i></a>
+                <a href="#" class="text-gray-800 hover:text-blue-600 relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                <button class="md:hidden text-gray-800">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32 px-4 page">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Helm Kualitas Premium</h1>
+            <p class="text-xl md:text-2xl mb-8">Untuk Keselamatan dan Kenyamanan Berkendara Anda</p>
+            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold inline-block" onclick="showPage('products')">Belanja Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 px-4 bg-gray-50 hidden page">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Produk Kami</h2>
+            
+           <!-- Helm Sepeda -->
+<div class="mb-16">
+    <h3 class="text-2xl font-semibold mb-6 ml-4">Helm Sepeda</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/GQ00zGPL/helm-sepeda1.jpg" 
+                     alt="ROCKBROS WT ‑ 099 BICYCLE HELMET" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">HOT</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">ROCKBROS WT ‑ 099 BICYCLE HELMET</h4>
+                <p class="text-gray-600 text-sm mb-4">Helmet ringan dengan ventilasi cukup, dilengkapi sweat-wicking pad dan adjustable rear knob. Cocok dipakai harian di kota atau sepeda santai.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 317.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/1G2WTnFg/helm-sepeda2.jpg" 
+                     alt="POLYGON MTB PATHFINDER HELMET" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-blue-500 text-white px-2 py-1 rounded text-xs font-bold">SNI</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">POLYGON MTB PATHFINDER HELMET</h4>
+                <p class="text-gray-600 text-sm mb-4">Dirancang untuk off-road/MTB, memiliki ventilasi optimal, busa EPS tebal, shell polikarbonat. Ideal untuk trail dan gravel.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 398.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/r2nrFH0K/helm-sepeda3.jpg" 
+                     alt="TAFFSPORT ROAD BIKE HELMET" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">NEW</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">TAFFSPORT ROAD BIKE HELMET</h4>
+                <p class="text-gray-600 text-sm mb-4">Model road dengan 18 ventilasi, shell PVC + EPS, bobot ringan dan sirkulasi udara baik—pas untuk latihan atau commuting.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 57.100</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+           <!-- Helm Bogo -->
+<div class="mb-16">
+    <h3 class="text-2xl font-semibold mb-6 ml-4">Helm Bogo</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/KpGt80mQ/bogo1.jpg" 
+                     alt="HELM BOGO RETRO CLASSIC – MERAH MARUN DOFF" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">CLASSIC</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">HELM BOGO RETRO CLASSIC – MERAH MARUN DOFF</h4>
+                <p class="text-gray-600 text-sm mb-4">Desain klasik dengan warna merah marun doff yang elegan, dilengkapi kaca cembung pelangi untuk tampilan yang stylish.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 280.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/232KtdQw/bogo2.jpg" 
+                     alt="HELM BOGO RETRO CLASSIC – HIJAU ARMY DOFF" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-bold">MILITARY</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">HELM BOGO RETRO CLASSIC – HIJAU ARMY DOFF</h4>
+                <p class="text-gray-600 text-sm mb-4">Warna hijau army doff memberikan kesan tangguh dan maskulin, cocok untuk pengendara yang menyukai tampilan militeristik.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 280.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/W4x39vPw/bogo3.jpg" 
+                     alt="HELM BOGO RETRO CLASSIC – BIRU PASTEL" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-yellow-500 text-white px-2 py-1 rounded text-xs font-bold">POPULAR</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">HELM BOGO RETRO CLASSIC – BIRU PASTEL</h4>
+                <p class="text-gray-600 text-sm mb-4">Tampilan lembut dan modern dengan warna biru pastel, cocok untuk pengendara yang menginginkan kesan segar dan ceria.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 280.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            <!-- Helm Half Face -->
+<div class="mb-16">
+    <h3 class="text-2xl font-semibold mb-6 ml-4">Helm Half Face</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/nqrzftP0/halfface1.jpg" 
+                     alt="HKM COSMO HALF ‑ FACE HELMET" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-gray-700 text-white px-2 py-1 rounded text-xs font-bold">URBAN</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">HKM COSMO HALF ‑ FACE HELMET</h4>
+                <p class="text-gray-600 text-sm mb-4">Helm kualitas premium, desain modern dengan kaca visor gelap, cocok untuk keseharian di kota.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 247.500</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/0pkPxkHL/halfface2.jpg" 
+                     alt="RSIX DELTA HALF ‑ FACE (SNI)" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-blue-500 text-white px-2 py-1 rounded text-xs font-bold">SNI</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">RSIX DELTA HALF ‑ FACE (SNI)</h4>
+                <p class="text-gray-600 text-sm mb-4">Helm aerodinamis, quick-release buckle, busa bisa dilepas, sudah bersertifikat SNI, aman untuk penggunaan di Indonesia.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 247.500</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/My5mdPQy/halfface3.jpg" 
+                     alt="KYT DJARUM HALF FACE" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">SPORT</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">KYT DJARUM HALF FACE</h4>
+                <p class="text-gray-600 text-sm mb-4">Helm half face dengan desain sporty, ventilasi baik, dan bobot ringan, ideal untuk berkendara sehari-hari.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 350.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+           <!-- Helm Full Face -->
+<div class="mb-16">
+    <h3 class="text-2xl font-semibold mb-6 ml-4">Helm Full Face</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/Jw2nmLxX/fullface1.jpg" 
+                     alt="HJC RPHA 11" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">HJC RPHA 11</h4>
+                <p class="text-gray-600 text-sm mb-4">Helm full face dengan aerodinamika tinggi, ventilasi optimal, dan desain stylish, cocok untuk pengendara sport.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 2.500.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/gZD74hW0/fullface2.jpg" 
+                     alt="SHOEI X-SPR PRO" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-blue-500 text-white px-2 py-1 rounded text-xs font-bold">PREMIUM</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">SHOEI X-SPR PRO</h4>
+                <p class="text-gray-600 text-sm mb-4">Helm full face premium dengan material komposit ringan, sistem ventilasi canggih, dan visor anti-kabut.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 4.800.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/qF57VQSz/fullface3.jpg" 
+                     alt="AGV K1" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">AGV K1</h4>
+                <p class="text-gray-600 text-sm mb-4">Helm full face dengan shell polycarbonate ringan, sistem ventilasi yang baik, dan desain aerodinamis.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 2.200.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+          <!-- Helm Trail -->
+<div class="mb-16">
+    <h3 class="text-2xl font-semibold mb-6 ml-4">Helm Trail</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/fdBr8R8v/trail1.jpg" 
+                     alt="NHK CROSS ONE" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">NEW</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">NHK CROSS ONE</h4>
+                <p class="text-gray-600 text-sm mb-4">Cocok untuk balap/trail, ringan dan memiliki sistem pernapasan terbaik untuk pemakaian intensif.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 950.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/dwKdpwMh/trail2.jpg" 
+                     alt="GM SUPER CROSS" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-yellow-500 text-white px-2 py-1 rounded text-xs font-bold">BESTSELLER</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">GM SUPER CROSS</h4>
+                <p class="text-gray-600 text-sm mb-4">Standar SNI & DOT, desain agresif, banyak varian warna dengan grafik yang keren.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 470.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+            <div class="relative overflow-hidden h-64">
+                <img src="https://i.ibb.co/FL3jZvsv/trail3.jpg" 
+                     alt="KYT CROSS OVER" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
+                <div class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded text-xs font-bold">SALE</div>
+            </div>
+            <div class="p-4">
+                <h4 class="font-bold text-lg mb-2">KYT CROSS OVER</h4>
+                <p class="text-gray-600 text-sm mb-4">Sudah sertifikasi SNI/DOT, nyaman dengan sirkulasi udara yang baik untuk pengendara trail.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold text-blue-600">Rp 500.000</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-blue-50">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" class="px-4 py-2 border border-blue-500 rounded-md text-white bg-blue-600">1</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-blue-50">2</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-blue-50">3</a>
+                    <span class="px-4 py-2 text-gray-700">...</span>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-blue-50">8</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 bg-white hover:bg-blue-50">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 px-4 bg-white hidden page">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Tentang Helmora</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1580522154071-c6ca47a859ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Toko Helmora" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Helmora - Safety First</h3>
+                    <p class="text-gray-600 mb-4">Helmora adalah toko helm yang menyediakan berbagai jenis helm berkualitas tinggi untuk memenuhi segala kebutuhan berkendara. Kami mengutamakan keselamatan, kenyamanan, dan juga gaya bagi setiap pelanggan kami.</p>
+                    <p class="text-gray-600 mb-4">Dengan lebih dari 50 pilihan jenis helm, Helmora hadir sebagai solusi lengkap bagi pengendara motor dan sepeda, baik harian maupun profesional.</p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-600 mb-2">Jam Operasional:</h4>
+                        <p class="text-gray-700">Buka Setiap Hari 09.00 - 22.00</p>
+                        <p class="text-gray-700">Jl. Tanjung Putra Yudha 1 No. 99, Malang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gray-50 hidden page">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Hubungi Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Alamat</h4>
+                                <p class="text-gray-600">Jl. Tanjung Putra Yudha 1 No. 99, Malang, Jawa Timur</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Telepon</h4>
+                                <p class="text-gray-600">(0341) 1234567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">info@helmora.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-medium">Jam Operasional</h4>
+                                <p class="text-gray-600">Setiap Hari 09.00 - 22.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-3">Ikuti Kami</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-700">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Kirim Pesan</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-1">Subjek</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HELMORA</h3>
+                    <p class="text-gray-400">Toko helm premium untuk sepeda dan motor dengan kualitas terbaik dan harga kompetitif.</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Produk</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Helm Sepeda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Helm Bogo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Helm Full Face</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Helm Half Face</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Helm Trail</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Bantuan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cara Pesan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pembayaran</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pengiriman</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pengembalian</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">Jl. Tanjung Putra Yudha 1 No. 99, Malang</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">(0341) 1234567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@helmora.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Helmora. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show home page by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
+                       
