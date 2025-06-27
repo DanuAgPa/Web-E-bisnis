@@ -32,6 +32,19 @@
         .whatsapp-btn:hover {
             background-color: #128C7E;
         }
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
     </style>
     <script>
         function showPage(page) {
@@ -40,13 +53,20 @@
                 p.classList.add('hidden');
             });
             document.getElementById(page).classList.remove('hidden');
+            
+            // Tutup mobile menu jika terbuka
+            document.getElementById('mobileMenu').classList.remove('active');
+        }
+        
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
         }
     </script>
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Header/Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center relative">
             <div class="flex items-center">
                 <a href="#" class="flex items-center">
                     <img src="https://i.ibb.co/VWyP6TgK/logo-helmora.png" alt="Helmora Logo" class="logo-img mr-2">
@@ -66,9 +86,19 @@
                     <i class="fas fa-shopping-cart"></i>
                     <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                 </a>
-                <button class="md:hidden text-gray-800">
+                <button class="md:hidden text-gray-800" onclick="toggleMobileMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu md:hidden">
+                <div class="container mx-auto px-4 py-2">
+                    <a href="#" class="block py-3 text-gray-800 hover:text-blue-600 border-b border-gray-200" onclick="showPage('home')">Home</a>
+                    <a href="#" class="block py-3 text-gray-800 hover:text-blue-600 border-b border-gray-200" onclick="showPage('products')">Products</a>
+                    <a href="#" class="block py-3 text-gray-800 hover:text-blue-600 border-b border-gray-200" onclick="showPage('about')">About Us</a>
+                    <a href="#" class="block py-3 text-gray-800 hover:text-blue-600" onclick="showPage('contact')">Contact</a>
+                </div>
             </div>
         </div>
     </header>
@@ -531,7 +561,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="https://i.ibb.co/VWyP6TgK/logo-helmora.png" alt="Helmora Logo" class="logo-img mr-2">
+                        <!-- Logo dihapus dari footer sesuai permintaan -->
                         <h3 class="text-xl font-bold">HELMORA</h3>
                     </div>
                     <p class="text-gray-400">Toko helm premium untuk sepeda dan motor dengan kualitas terbaik.</p>
